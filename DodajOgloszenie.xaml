@@ -1,0 +1,175 @@
+﻿<Window x:Class="Projekt_zaliczenie.DodajOgloszenie"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projekt_zaliczenie"
+        mc:Ignorable="d" WindowState="Maximized"
+        Title="Dodaj Ogłoszenie" Height="1080" Width="1920">
+    <StackPanel>
+        <StackPanel>
+            <StackPanel.Effect>
+                <DropShadowEffect ShadowDepth="0.5" BlurRadius="10" Color="black"/>
+            </StackPanel.Effect>
+
+            <Grid Height="70px" VerticalAlignment="Top" Background="White">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.6*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.6*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                    <ColumnDefinition Width="0.3*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.55*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.2*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.2*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Image x:Name="myImage" Source="C:\Users\Piotr\Desktop\Projekt-PAD\Grafiki\logoPortalu.png" HorizontalAlignment="Left" Margin="30,0" Height="70" Grid.Column="0"/>
+                <Button Width="auto" FontSize="20" Height="30" Foreground="White" Grid.Column="2" Background="Black" BorderBrush="{x:Null}" >Moje ogłoszenia</Button>
+                <Button Width="auto" FontSize="20" Height="30" Foreground="Black" Grid.Column="1" Background="{x:Null}" BorderBrush="{x:Null}" Click="Button_StronaGlowna">Strona Główna</Button>
+                <TextBox Grid.Column="4" Height="30" Foreground="Black" x:Name="SearchBox" Margin="0"  FontSize="16" />
+
+                <Button Grid.Column="5" Content="Szukaj" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Background="Black" Foreground="White" Width="100" FontSize="14" />
+
+                <Button x:Name="ButtonZaloguj" Content="Wyloguj się" Width="150px" Height="40"  FontSize="20" Foreground="Black" Grid.Column="7" Background="{x:Null}" Click="Button_Clicked">
+                    <Button.BorderThickness>
+                        <Thickness>2</Thickness>
+                    </Button.BorderThickness>
+                </Button>
+                <Button x:Name="buttonKonto" Height="50" Width="50"  FontSize="20" Foreground="{x:Null}" Grid.Column="8" Background="{x:Null}" BorderBrush="{x:Null}" Click="Button_Konto">
+                    <Image Source="C:\Users\Piotr\Desktop\Projekt-PAD\Grafiki\konto.png" HorizontalAlignment="Left" Margin="0,0" Height="40"/>
+                </Button>
+                <Image HorizontalAlignment="Left" Margin="0,0" Height="40" Grid.Column="9"/>
+
+
+            </Grid>
+            <StackPanel Margin="15">
+                <Border BorderBrush="Black" BorderThickness="1" Width="1100">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1.3*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="2*"></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <Label x:Name="ogloszenieTextBox" Content="Dodaj ogłoszenie" HorizontalContentAlignment="Center" Width="1100" Grid.Row="0" Background="Black" Foreground="white" Grid.ColumnSpan="4" FontSize="30"></Label>
+
+                        <Label Margin="50,0" Content="Nazwa Ogłoszenia :" Grid.Column="0" Grid.Row="2" Foreground="Black" VerticalContentAlignment="Bottom"/>
+                        <TextBox x:Name="TitleTextBox" Text="{Binding NazwaOgloszenia}" Background="white" Foreground="black" FontSize="18" Width="1000" Grid.ColumnSpan="2" Grid.Row="3"/>
+
+                        <Label Margin="50,0" Content="URL grafiki ogłoszenia :" Grid.Column="0" Grid.Row="4" Foreground="Black" VerticalContentAlignment="Bottom"/>
+                        <TextBox x:Name="ZdjTextBox" Text="{Binding Zdjecie}" Background="white" Foreground="black" FontSize="18" Width="1000" Grid.ColumnSpan="2" Grid.Row="5"/>
+
+                        <Label Margin="50,0" Content="Firma (opcjonalnie) :" Grid.Column="0" Grid.Row="6" Foreground="Black" VerticalContentAlignment="Bottom"/>
+                        <TextBox x:Name="FirmaTextBox" Text="{Binding Firma}" Background="white" Foreground="black" FontSize="18" Width="1000" Grid.ColumnSpan="2" Grid.Row="7"/>
+
+                        <Label Margin="50,0" Content="NazwaStanowiska :" Grid.Column="0" Grid.Row="8" Foreground="Black" VerticalContentAlignment="Bottom"/>
+                        <TextBox x:Name="NazwaStanowiskaTextBox" Text="{Binding Nazwastanowiska}" Background="white" Foreground="black" FontSize="18" Width="1000" Grid.ColumnSpan="2" Grid.Row="9"/>
+
+                        <Label Margin="50,0" Content="PoziomZatrudnienia :" Grid.Column="0" Grid.Row="10" Foreground="Black" VerticalContentAlignment="Bottom"/>
+                        <TextBox x:Name="PoziomZatrudnieniaTextBox" Text="{Binding PoziomZatrudnienia}" Background="white" Foreground="black" FontSize="18" Width="1000" Grid.ColumnSpan="2" Grid.Row="11"/>
+
+                        <Label Margin="50,0" Content="RodzajUmowy :" Grid.Column="0" Grid.Row="12" Foreground="Black" VerticalContentAlignment="Bottom"/>
+                        <ComboBox x:Name="RodzajUmowyTextBox" Text="{Binding RodzajUmowy}" Background="white" Foreground="black" FontSize="18" Width="1000" Grid.ColumnSpan="2" Grid.Row="13" IsEditable="False">
+                            <ComboBoxItem >naOkreslonyCzas</ComboBoxItem>
+                            <ComboBoxItem >naCzasNieokreslony</ComboBoxItem>
+                            <ComboBoxItem >naOkresProbny</ComboBoxItem>
+                        </ComboBox>
+
+                        <Label Margin="50,0" Content="RodzajPracy :" Grid.Column="0" Grid.Row="14" Foreground="Black" VerticalContentAlignment="Bottom"/>
+                        <TextBox x:Name="RodzajPracyTextBox" Text="{Binding RodzajPracy}" Background="white" Foreground="black" FontSize="18" Width="1000" Grid.ColumnSpan="2" Grid.Row="15"/>
+
+                        <Label Margin="50,0" Content="Praca Zdalna :" Grid.Column="0" Grid.Row="16" Foreground="Black" VerticalContentAlignment="Bottom"/>
+                        <ComboBox x:Name="PracaZdalnaTextBox" Text="{Binding PracaZdalna}" Background="white" Foreground="black" FontSize="18" Width="1000" Grid.ColumnSpan="2" Grid.Row="17" IsEditable="False">
+                            <ComboBoxItem>TAK</ComboBoxItem>
+                            <ComboBoxItem>NIE</ComboBoxItem>
+                        </ComboBox>
+
+                        <Label Margin="50,0" Content="Wynagrodzenie :" Grid.Column="0" Grid.Row="18" Foreground="Black" VerticalContentAlignment="Bottom"/>
+                        <TextBox x:Name="WynagrodzenieTextBox" Text="{Binding Wynagrodzenie}" Background="white" Foreground="black" FontSize="18" Width="1000" Grid.ColumnSpan="2" Grid.Row="19"/>
+
+                        <Label Margin="50,0" Content="Dni Pracy :" Grid.Column="0" Grid.Row="20" Foreground="Black" VerticalContentAlignment="Bottom"/>
+                        <TextBox x:Name="DniPracyTextBox" Text="{Binding DniPracy}" Background="white" Foreground="black" FontSize="18" Width="1000" Grid.ColumnSpan="2" Grid.Row="21"/>
+
+                        <Label Margin="50,0" Content="Godziny Pracy :" Grid.Column="0" Grid.Row="22" Foreground="Black" VerticalContentAlignment="Bottom"/>
+                        <TextBox x:Name="GodzinyPracyTextBox" Text="{Binding GodzinyPracy}" Background="white" Foreground="black" FontSize="18" Width="1000" Grid.ColumnSpan="2" Grid.Row="23"/>
+
+                        <Label Margin="50,0" Content="Data Wygasniecia Ogloszenia:" Grid.Column="0" Grid.Row="24" Foreground="Black" VerticalContentAlignment="Bottom"/>
+                        <DatePicker x:Name="DataWygasnieciaTextBox" Text="{Binding DataWygasniecia}" Background="white" Foreground="black" FontSize="18" Width="1000" Grid.ColumnSpan="2" Grid.Row="25"/>
+
+                        <Label Margin="50,0" Content="Kategoria :" Grid.Column="0" Grid.Row="26" Foreground="Black" VerticalContentAlignment="Bottom"/>
+                        <ComboBox x:Name="KategoriaTextBox" Text="{Binding Kategoria}" Background="white" Foreground="black" FontSize="18" Width="1000" Grid.ColumnSpan="2" Grid.Row="27" IsEditable="False">
+                            <ComboBoxItem>Wszystkie</ComboBoxItem>
+                            <ComboBoxItem>Programista</ComboBoxItem>
+                        </ComboBox>
+
+                        <Label Margin="50,0" Content="OpisStanowiska :" Grid.Column="0" Grid.Row="28" Foreground="Black" VerticalContentAlignment="Bottom"/>
+                        <TextBox x:Name="OpisStanowiskaTextBox" Text="{Binding OpisStanowiska}" Background="white" Foreground="black" FontSize="18" Width="1000" Grid.ColumnSpan="2" Grid.Row="29"/>
+
+                        <Label Margin="50,0" Content="Wymagania :" Grid.Column="0" Grid.Row="30" Foreground="Black" VerticalContentAlignment="Bottom"/>
+                        <TextBox x:Name="WymaganiaTextBox" Text="{Binding Wymagania}" Background="white" Foreground="black" FontSize="18" Width="1000" Grid.ColumnSpan="2" Grid.Row="31"/>
+
+
+
+                        <Button Width="200" Height="40" Grid.Row="32" Grid.Column="0" Margin="20" FontSize="20" Foreground="Black" Background="{x:Null}" Click="ButtonCofnij_Clicked">
+                            <Button.BorderThickness>
+                                <Thickness>2</Thickness>
+                            </Button.BorderThickness>
+                            Cofnij
+                        </Button>
+
+                        <Button x:Name="button" Width="200" Height="40" Grid.Row="32" Grid.Column="1" Margin="20" FontSize="20" Foreground="Black" Background="{x:Null}" Click="ButtonDodajOgloszenie_Clicked">
+                            <Button.BorderThickness>
+                                <Thickness>2</Thickness>
+                            </Button.BorderThickness>
+                            Dodaj ogloszenie
+                        </Button>
+                    </Grid>
+                </Border>
+            </StackPanel>
+        </StackPanel>
+
+
+
+    </StackPanel>
+</Window>

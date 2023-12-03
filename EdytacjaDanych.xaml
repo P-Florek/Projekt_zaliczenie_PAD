@@ -1,0 +1,62 @@
+﻿<Window x:Class="Projekt_zaliczenie.EdytacjaDanych"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projekt_zaliczenie"
+        mc:Ignorable="d"
+        Title="Edytuj Dane :" Height="450" Width="700">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.3*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Label Content="Edytacja danych użytkownika :" Grid.ColumnSpan="2" Foreground="White" Background="Black" Width="700" HorizontalContentAlignment="Center" FontSize="20" HorizontalAlignment="Center" VerticalContentAlignment="Top"/>
+
+        <Label Margin="0,0" Content="Imie :" Grid.Column="0" Grid.Row="1" Foreground="Black" VerticalContentAlignment="Bottom"/>
+        <TextBox x:Name="imieTextBox" Text="{Binding Imie}" Background="white" Foreground="black" FontSize="18" Width="330" Grid.Column="0" Grid.Row="2"/>
+        <Label Margin="5,0" Content="Nazwisko :" Foreground="Black" VerticalContentAlignment="Bottom" Grid.Column="0" Grid.Row="3"/>
+        <TextBox x:Name="nazwiskoTextBox" Text="{Binding Nazwisko}" Background="white" Foreground="black" FontSize="18" Width="330" Grid.Column="0" Grid.Row="4"/>
+        <Label Margin="5,0" Content="URL Profilowego :" Foreground="Black" VerticalContentAlignment="Bottom" Grid.Column="0" Grid.Row="11"/>
+        <TextBox x:Name="ProfiloweTextBox" Text="{Binding ZdjProfilowe}" Background="white" Foreground="black" FontSize="18" Width="330" Grid.Column="0" Grid.Row="12"/>
+        <Label Margin="5,0" Content="Adres :" Foreground="Black" VerticalContentAlignment="Bottom" Grid.Column="1" Grid.Row="1"/>
+        <TextBox x:Name="AdresTextBox" Text="{Binding Adres}" Background="white" Foreground="black" FontSize="18" Width="330" Grid.Column="1" Grid.Row="2"/>
+        <Label Margin="5,0" Content="Stanowisko pracy :" Foreground="Black" VerticalContentAlignment="Bottom" Grid.Column="1" Grid.Row="3"/>
+        <TextBox x:Name="StanowiskoTextBox" Text="{Binding StanowsikoPracy}" Background="white" Foreground="black" FontSize="18" Width="330" Grid.Column="1" Grid.Row="4"/>
+        <Label Margin="5,0" Content="Opis pracy :" Foreground="Black" VerticalContentAlignment="Bottom" Grid.Column="1" Grid.Row="5"/>
+        <TextBox x:Name="OpisTextBox" Text="{Binding OpisStanowiskaPracy}" Background="white" Foreground="black" FontSize="18" Width="330" Grid.Column="1" Grid.Row="6"/>
+        <Label Margin="5,0" Content="Podsumowanie Zawodowe :" Foreground="Black" VerticalContentAlignment="Bottom" Grid.Column="1" Grid.Row="7"/>
+        <TextBox x:Name="PodsumowanieTextBox" Text="{Binding PodsumowanieZawodowe}" Background="white" Foreground="black" FontSize="18" Width="330" Grid.Column="1" Grid.Row="8"/>
+        <Label Margin="5,0" Content="Profil Github :" Foreground="Black" VerticalContentAlignment="Bottom" Grid.Column="1" Grid.Row="9"/>
+        <TextBox x:Name="GitHubTextBox" Text="{Binding ProfilGitHub}" Background="white" Foreground="black" FontSize="18" Width="330" Grid.Column="1" Grid.Row="10"/>
+        <Label Margin="5,0" Content="Data urodzenia :" Foreground="Black" VerticalContentAlignment="Bottom" Grid.Column="0" Grid.Row="5"/>
+        <DatePicker x:Name="DataurodzeniaTextBox" Text="{Binding DataUrodzenia}" Background="white" Foreground="black" FontSize="18" Width="330" Grid.Column="0" Grid.Row="6"></DatePicker>
+        <Label Margin="5,0" Content="Email :" Foreground="Black" VerticalContentAlignment="Bottom" Grid.Column="0" Grid.Row="7"/>
+        <TextBox x:Name="emailTextBox" Text="{Binding Email}" Background="white" Foreground="black" FontSize="18" Width="330" Grid.Column="0" Grid.Row="8"/>
+        <Label Margin="5,0" Content="Telefon :" Foreground="Black" VerticalContentAlignment="Bottom" Grid.Column="0" Grid.Row="9"/>
+        <TextBox x:Name="telefonTextBox" Text="{Binding Telefon}" Background="white" Foreground="black" FontSize="18" Width="330" Grid.Column="0" Grid.Row="10"/>
+        <Label Margin="5,0" Content="Hasło :" Foreground="Black" VerticalContentAlignment="Bottom" Grid.Column="1" Grid.Row="11"/>
+        <TextBox x:Name="paswordTextBox" Text="{Binding Haslo}"  Background="white" Foreground="black" FontSize="18" Width="330" Grid.Column="1" Grid.Row="12"/>
+
+        <Button Grid.Column="0" Grid.Row="13" VerticalAlignment="Center" Content="Cofnij" Click="ButtonCofnij_Clicked" HorizontalAlignment="Center" Width="300px" Height="30"  FontSize="20" Foreground="Black" Margin="0,0,0,0" Background="{x:Null}"/>
+        <Button Grid.Column="1" Grid.Row="13" VerticalAlignment="Center" Content="Edytuj" Click="ButtonEdytacjaDanych_Clicked" HorizontalAlignment="Center" Width="300px" Height="30"  FontSize="20" Foreground="Black" Margin="0,0,0,0" Background="{x:Null}"/>
+
+    </Grid>
+</Window>

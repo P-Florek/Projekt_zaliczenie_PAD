@@ -1,0 +1,37 @@
+﻿<Window x:Class="Projekt_zaliczenie.Logowanie"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projekt_zaliczenie"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="380" Width="340" FontSize="14"
+        WindowStartupLocation="CenterScreen"
+        Background="white"
+>
+    <Grid>
+        <Grid.Effect>
+            <DropShadowEffect ShadowDepth="2" BlurRadius="10" Color="black"/>
+        </Grid.Effect>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel Margin="3" Grid.Row="0" Background="White">
+            <Label Content="Logowanie do aplikacji!" Foreground="Black" FontSize="25" HorizontalAlignment="Center"/>
+            <Separator Background="Black"></Separator>
+            <Label Margin="5,0" Content="Email :" Foreground="Black"/>
+            <TextBox x:Name="emailTextBox" Background="white" Foreground="black" FontSize="18" Width="300"/>
+            <Label Margin="5,0" Content="Password :" Foreground="Black"/>
+            <PasswordBox x:Name="passwordTextBox" Background="white" Foreground="Black" FontSize="18" Width="300"/>
+            <Button x:Name="Wyslij" Content="Zaloguj się!" Width="300px" Height="30"  FontSize="20" Foreground="Black" Margin="0,20" Background="{x:Null}" Click="Login_Click"/>
+            <Button Content="Zarejestruj się"  HorizontalAlignment="Center" Width="300px" Height="30"  FontSize="20" Foreground="Black" Margin="0,0,0,0" Background="{x:Null}" Click="Register_Click"/>
+            <Frame x:Name="logowanie" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        </StackPanel>
+        
+        <StackPanel Margin="3" Grid.Row="2" Background="White" Height="40">
+            <Button Content="kontynuuj bez logowania" FontSize="25" HorizontalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Center" Click="LogIn_Off"/>
+        </StackPanel>
+    </Grid>
+</Window>
